@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Peyda-Black";
+    src: url("../font/peyda-black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-Bold";
+    src: url("../font/peyda-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-ExtraBold";
+    src: url("../font/peyda-extrabold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-ExtraLight";
+    src: url("../font/peyda-extralight.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-Light";
+    src: url("../font/peyda-light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-Medium";
+    src: url("../font/peyda-medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-Regular";
+    src: url("../font/peyda-regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-SemiBold";
+    src: url("../font/peyda-semibold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Peyda-Thin";
+    src: url("../font/peyda-thin.ttf") format("truetype");
+}
