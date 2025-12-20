@@ -10,6 +10,12 @@
     .container {
         width: 72rem;
     }
+    .hero-content {
+        padding: 3rem 2rem;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        width: 95%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -28,4 +34,7 @@
     .container {
         width: 1370px;
     }
+}
+@media (max-width: 768px) {
+
 }
