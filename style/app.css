@@ -1,6 +1,19 @@
-/* ===== ALL CSS Variables in :root ===== */
+.dis-flex-c-c, .dis-flex-c-sb {
+    display: flex;
+    align-items: center
+}
+
+.show-more::after, .show-more::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -20px;
+    width: 1.2rem;
+    height: .1rem;
+    background-color: var(--primary-700)
+}
+
 :root {
-    /* رنگ‌های اصلی (مقادیر اصلاح شده) */
     --primary-50: #e0f2fb;
     --primary-100: #f5e7d7;
     --primary-200: #eadedf;
@@ -11,38 +24,28 @@
     --primary-700: #744d7e;
     --primary-800: #60d068;
     --primary-900: #f53c5c;
-
-    /* رنگ‌های خطا */
     --error-100: #ff6ee0;
     --error-300: #ff8aa1;
     --error-500: #ff2a3c;
     --error-600: #ec0b1a;
     --error-900: #ec1018;
-
-    /* رنگ‌های اطلاعات */
     --info-100: #e8f2ff;
     --info-600: #f891fc;
     --info-700: #0d76e8;
     --info-900: #f55193;
-
-    /* رنگ‌های موفقیت */
     --success-200: #e0f2ce;
     --success-400: #57d179;
     --success-500: #30b757;
     --success-700: #fe7738;
-
-    /* رنگ‌های هشدار */
     --warning-100: #fe0dc3;
     --warning-300: #f6ce48;
     --warning-500: #e9c309;
     --warning-700: #a08e08;
-
-    /* رنگ‌های خنثی */
     --gray-10: #ffffff;
     --gray-20: #ebebeb;
     --gray-30: #d7d7d7;
     --gray-40: #c3c3c3;
-    --gray-50: #b0b0b0;
+    --gray-50: #c4c4c4;
     --gray-100: #9d9d9d;
     --gray-200: #8a8aa8;
     --gray-300: #787878;
@@ -53,8 +56,6 @@
     --gray-800: #242424;
     --gray-900: #161616;
     --gray-950: #000000;
-
-    /* فونت‌های Peyda */
     --font-peyda-black: "Peyda-Black", sans-serif;
     --font-peyda-extrabold: "Peyda-ExtraBold", sans-serif;
     --font-peyda-bold: "Peyda-Bold", sans-serif;
@@ -62,8 +63,6 @@
     --font-peyda-regular: "Peyda-Regular", sans-serif;
     --font-peyda-light: "Peyda-Light", sans-serif;
     --font-peyda-thin: "Peyda-Thin", sans-serif;
-
-    /* وزن‌های فونت */
     --fw-black: 900;
     --fw-extrabold: 800;
     --fw-bold: 700;
@@ -71,58 +70,53 @@
     --fw-regular: 400;
     --fw-light: 300;
     --fw-thin: 100;
-
-    /* سایز فونت موبایل */
     --fs-m-h1: 36px;
     --fs-m-h2: 24px;
     --fs-m-title: 18px;
     --fs-m-subtitle: 14px;
     --fs-m-body: 12px;
     --fs-m-caption: 8px;
-
-    /* سایز فونت دسکتاپ */
     --fs-d-h1: 56px;
     --fs-d-h2: 36px;
     --fs-d-title: 28px;
     --fs-d-subtitle: 16px;
     --fs-d-body: 16px;
-    --fs-d-caption: 12px;
+    --fs-d-caption: 12px
 }
 
-/* ===== استایل‌های پایه تایپوگرافی ===== */
-h1, .h1 {
+.h1, h1 {
     font-family: var(--font-peyda-black);
     font-size: var(--fs-m-h1);
     font-weight: var(--fw-black);
-    line-height: 1.2;
+    line-height: 1.2
 }
 
-h2, .h2 {
+.h2, h2 {
     font-family: var(--font-peyda-extrabold);
     font-size: var(--fs-m-h2);
     font-weight: var(--fw-extrabold);
-    line-height: 1.3;
+    line-height: 1.3
 }
 
 .title {
     font-family: var(--font-peyda-bold);
     font-size: var(--fs-m-title);
     font-weight: var(--fw-bold);
-    line-height: 1.4;
+    line-height: 1.4
 }
 
 .subtitle {
     font-family: var(--font-peyda-medium);
     font-size: var(--fs-m-subtitle);
     font-weight: var(--fw-medium);
-    line-height: 1.5;
+    line-height: 1.5
 }
 
-body, p, .body-text {
+.body-text, body, p {
     font-family: var(--font-peyda-regular);
     font-size: var(--fs-m-body);
     font-weight: var(--fw-regular);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 .caption {
@@ -130,258 +124,237 @@ body, p, .body-text {
     font-size: var(--fs-m-caption);
     font-weight: var(--fw-thin);
     line-height: 1.4;
-    opacity: 0.8;
+    opacity: .8
 }
 
-/* ===== رسپانسیو برای دسکتاپ ===== */
-@media (min-width: 768px) {
-    h1, .h1 {
-        font-size: var(--fs-d-h1);
-    }
-
-    h2, .h2 {
-        font-size: var(--fs-d-h2);
-    }
-
-    .title {
-        font-size: var(--fs-d-title);
-    }
-
-    .subtitle {
-        font-size: var(--fs-d-subtitle);
-    }
-
-    body, p, .body-text {
-        font-size: var(--fs-d-body);
-    }
-
-    .caption {
-        font-size: var(--fs-d-caption);
-        font-family: var(--font-peyda-light);
-        font-weight: var(--fw-light);
-    }
-}
-
-/* ===== کلاس‌های کمکی رنگ (از نسخه قبل) ===== */
 .bg-primary-500 {
-    background-color: var(--primary-500);
+    background-color: var(--primary-500)
 }
 
 .text-primary-500 {
-    color: var(--primary-500);
+    color: var(--primary-500)
 }
 
 .border-primary-500 {
-    border-color: var(--primary-500);
+    border-color: var(--primary-500)
 }
 
 .bg-error-500 {
-    background-color: var(--error-500);
+    background-color: var(--error-500)
 }
 
 .text-error-500 {
-    color: var(--error-500);
+    color: var(--error-500)
 }
 
 .bg-info-500 {
-    background-color: var(--info-700);
+    background-color: var(--info-700)
 }
 
 .text-info-500 {
-    color: var(--info-700);
+    color: var(--info-700)
 }
 
 .bg-success-500 {
-    background-color: var(--success-500);
+    background-color: var(--success-500)
 }
 
 .text-success-500 {
-    color: var(--success-500);
+    color: var(--success-500)
 }
 
 .bg-warning-500 {
-    background-color: var(--warning-500);
+    background-color: var(--warning-500)
 }
 
 .text-warning-500 {
-    color: var(--warning-500);
+    color: var(--warning-500)
 }
 
-/* کلاس‌های کمکی خاکستری */
 .bg-gray-50 {
-    background-color: var(--gray-50);
+    background-color: var(--gray-50)
 }
 
 .text-gray-800 {
-    color: var(--gray-800);
+    color: var(--gray-800)
 }
 
 .border-gray-300 {
-    border-color: var(--gray-300);
+    border-color: var(--gray-300)
 }
 
-/* کلاس‌های معنایی */
 .bg-surface {
-    background-color: var(--gray-10);
+    background-color: var(--gray-10)
 }
 
 .bg-surface-dark {
-    background-color: var(--gray-900);
+    background-color: var(--gray-900)
 }
 
 .text-on-surface {
-    color: var(--gray-950);
+    color: var(--gray-950)
 }
 
-.text-on-surface-light {
-    color: var(--gray-10);
+.btn, .text-on-surface-light {
+    color: var(--gray-10)
 }
 
-/* ===== کلاس‌های کمکی اختیاری ===== */
 .text-light {
     font-family: var(--font-peyda-light);
-    font-weight: var(--fw-light);
+    font-weight: var(--fw-light)
+}
+
+.btn, .text-bold {
+    font-family: var(--font-peyda-bold)
 }
 
 .text-bold {
-    font-family: var(--font-peyda-bold);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-bold)
 }
 
 .text-center {
-    text-align: center !important;
+    text-align: center !important
 }
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
+*, ::after, ::before {
+    box-sizing: inherit
 }
 
 body {
     line-height: 1.6;
     font-size: 1.6rem;
     font-family: var();
-    background-color: #F5F6F8;
-    overflow-x: hidden;
+    background-color: #f5f6f8;
+    overflow-x: hidden
 }
 
-/*
-----Component
-*/
 .dis-flex-c-c {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .g3 {
-    gap: 3rem;
+    gap: 3rem
 }
 
 .dis-flex-c-sb {
+    justify-content: space-between
+}
+
+.btn, .header-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center
 }
 
 .btn {
     width: 22.3rem;
     height: 6.5rem;
-    border-radius: 0.8rem;
+    border-radius: .8rem;
     background-color: var(--gray-950);
-    color: var(--gray-10);
-    font-family: var(--font-peyda-bold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .title-section {
-    margin-bottom: 2.8rem;
+    margin: 5.6rem 0 2.8rem;
 }
 
 .show-more {
     display: inline-block;
     color: var(--primary-700);
     position: relative;
+    margin-left: 2rem
 }
 
 .show-more::before {
-    display: block;
-    content: '';
-    position: absolute;
     top: 8.2px;
-    left: -20px;
-    width: 1.2rem;
-    height: 0.1rem;
-    background-color: var(--primary-700);
-    transform: rotate(135deg);
+    transform: rotate(135deg)
 }
 
 .show-more::after {
-    display: block;
-    content: '';
-    position: absolute;
-    left: -20px;
     bottom: 8.2px;
-    width: 1.2rem;
-    height: 0.1rem;
-    background-color: var(--primary-700);
-    transform: rotate(45deg);
+    transform: rotate(45deg)
 }
 
-/*
-----Reset CSS
-*/
+.product-item__offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .4rem 0 0 .5rem;
+    width: 5.8rem;
+    height: 3.6rem;
+    background-color: var(--error-600);
+    border: solid .2rem var(--gray-10);
+    color: var(--gray-10);
+    border-radius: 1.5rem 0 0 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: -2px;
+    font-family: var(--font-peyda-bold);
+}
+
+.product-item__book-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .4rem 0 0 .5rem;
+    width: 5.8rem;
+    height: 3.6rem;
+    background-color: var(--gray-300);
+    border-radius: 0 1.5rem 1.5rem 0;
+    position: absolute;
+    bottom: 148px;
+    left: -11px;
+    transition: background-color .2s ease-in;
+}
+
+.Category-audio-books__link, .Category-text-books__link, .link-page__product {
+    color: var(--gray-900)
+}
+
+.login-mylib__link, .logo-link, .nav-Download-app__link {
+    color: var(--primary-700)
+}
+
 a {
-    text-decoration: none;
+    text-decoration: none
 }
 
-/*
-----App Css
-*/
-
-/* ===== HEADER ===== */
 .header {
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 0 0 2rem 2rem
 }
 
 .header-wrapper {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-top: 1rem;
+    padding-top: 1rem
+}
+
+.logo-link, .search-header {
+    align-items: center;
+    display: flex
 }
 
 .logo-link {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    color: var(--primary-700);
+    gap: 1rem
 }
 
 .search-header {
     width: 80rem;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: relative
 }
 
 .input-search {
     width: 100%;
-    padding: 1rem 1rem;
+    padding: 1rem;
     border: solid 1px var(--gray-40);
     border-radius: .8rem;
-    font-family: var(--font-peyda-regular);
+    font-family: var(--font-peyda-regular)
 }
 
 .search-header__ico {
@@ -393,14 +366,14 @@ a {
     width: 5rem;
     height: 3rem;
     transform: rotateY(180deg);
-    background-color: white;
+    background-color: #fff
 }
 
 .login-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: .8rem
 }
 
 .login-mylib__link {
@@ -408,63 +381,43 @@ a {
     height: 4.4rem;
     border-radius: .8rem;
     border: solid 1px var(--gray-40);
-    gap: .4rem;
-    color: var(--primary-700);
+    gap: .4rem
 }
 
 .login-buy__link {
     width: 4.8rem;
     height: 4.8rem;
     border-radius: .8rem;
-    border: solid 1px var(--gray-40);
+    border: solid 1px var(--gray-40)
 }
 
 .login-user__link {
     width: 8rem;
     height: 4.8rem;
     border-radius: .8rem;
-    border: solid 1px var(--gray-40);
+    border: solid 1px var(--gray-40)
 }
-
-/* ===== NAV ===== */
 
 .nav {
     margin-top: 1.2rem;
-    height: 4.8rem;
+    height: 4.8rem
 }
 
 .nav-Category {
-    gap: 4.5rem;
+    gap: 4.5rem
 }
 
-.Category-text-books, .Category-audio-books {
-    gap: .4rem;
+.Category-audio-books, .Category-text-books {
+    gap: .4rem
 }
 
-.Category-text-books__link, .Category-audio-books__link {
-    color: var(--gray-900);
-}
-
-.show-more {
-
-}
-
-.nav-Download-app__link {
-    color: var(--primary-700);
-}
-
-/* ===== Hero ===== */
-
-/* ===== Hero ===== */
 .hero {
-    background: url("../images/baner-1.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url("../images/baner-1.jpg") center/cover no-repeat;
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem
 }
 
 .hero .container {
@@ -472,107 +425,91 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 5rem
 }
 
 .hero-content {
-    max-width: 80rem;
-    width: 90%;
+    max-width: 60rem;
+    width: 50%;
     color: var(--gray-10);
     padding: 4rem 3rem;
-    background: linear-gradient(
-            135deg,
-            rgba(78, 75, 75, 0.7),
-            rgba(58, 55, 55, 0.4)
-    );
+    background: linear-gradient(135deg, rgba(78, 75, 75, .7), rgba(58, 55, 55, .4));
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
-    /*position: relative;*/
     margin: 0 auto;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .3)
 }
 
-.hero-title {
+.hero-description, .hero-title {
     flex-basis: 50%;
-}
-
-.hero-description {
-    flex-basis: 50%;
+    text-align: center;
 }
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .category {
-    margin: 5.6rem auto;
+    margin: 5.6rem auto
 }
 
-.category-wrapper {
-
-}
-
-.audio-book, .text-book,
-.historical-book,
-.psychology-book,
-.foreign-novel {
+.audio-book, .foreign-novel, .historical-book, .psychology-book, .text-book {
     width: 18rem;
     height: 6rem;
     border: dotted 3px var(--gray-50);
-    border-radius: .8rem;
+    border-radius: .8rem
 }
 
-.audio-book__link, .text-book__link,
-.historical-book__link,
-.psychology-book__link,
-.foreign-novel__link {
+.audio-book__link, .foreign-novel__link, .historical-book__link, .psychology-book__link, .text-book__link {
     gap: 2rem;
     color: var(--gray-900);
-    font-family: var(--font-peyda-black);
+    font-family: var(--font-peyda-black)
 }
 
-
-.product{
-
-}
-.product-wrapper{
+.product-wrapper {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    padding-right: -16px;
-    padding-left: -16px;
+    align-items: center
 }
+
 .product-item {
     background-color: var(--gray-10);
-    width: 19.7rem;
-    height: 41rem;
+    width: 20.6rem;
+    height: auto;
+    transition: all .2s ease-in;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.product-item:hover {
+    box-shadow: 1px 1px 15px rgba(224, 224, 224, .55);
+    transform: translateY(-2px)
 }
 
 .product-item__banner {
-    width: 20rem;
-    height: 27rem;
-    background-color: var(--gray-20);
+    background-color: var(--gray-20)
 }
 
 .product-item__img {
     display: block;
-    padding: 3.7rem;
+    padding: 3.7rem
 }
 
 .product-item-content {
-    padding: 1.2rem;
+    padding: 1.6rem
 }
 
 .product-item__name-book {
-    font-family: var(--font-peyda-bold);
+    font-family: var(--font-peyda-bold)
 }
 
 .product-item__author {
     margin: .7rem 0 .3rem;
     font-family: var(--font-peyda-medium);
-    color: var(--gray-200);
+    color: var(--gray-200)
 }
 
 .product-item__stars {
@@ -580,30 +517,67 @@ a {
     align-items: center;
     gap: .4rem;
     border-bottom: solid 1px var(--gray-200);
-    padding-bottom: 1.2rem;
+    padding-bottom: 1.2rem
 }
 
 .number-stars {
     display: block;
     width: 2rem;
-    height: 2rem;
+    height: 2rem
 }
 
 .prices {
     margin-top: .5rem;
     display: flex;
-    gap: 1.6rem;
+    gap: 1.6rem
 }
 
 .price-off {
     text-decoration: line-through;
-    color: var(--gray-200);
+    color: var(--gray-200)
 }
 
-.price {
-
+.product-item:hover .product-item__book-status {
+    background-color: var(--gray-600);
 }
 
-.price-toman {
+/**/
+.banner {
+    margin-top: 5.7rem;
+    overflow: hidden;
+}
+
+.banner-wrapper {
+    border-radius: 1rem;
+    background: url("../images/product/Book Card/Back.jpg") no-repeat center left;
+    background-size: cover;
+}
+
+.banner-img__left {
+    display: block;
+    width: 44.9rem;
+    height: 46.6rem;
+    mix-blend-mode: hard-light;
+}
+
+.banner-content {
+    width: 80rem;
+    margin: 0 auto;
+    color: var(--gray-10);
+}
+
+.banner-content__title {
+    font-family: var(--font-peyda-bold);
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+}
+
+.banner-content__caption {
+    font-family: var(--font-peyda-bold);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.banner-content__link {
 
 }
